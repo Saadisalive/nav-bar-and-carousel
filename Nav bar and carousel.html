@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .topnav {
+     overflow: hidden;
+     background-color: grey;
+    }
+    .topnav a{
+        color: yellow;
+        text-align: center;
+         text-decoration: none;
+        float:left;                                                          
+        padding: 16px 18px;
+        font-size: 20px;
+        background-color: blue;
+    }
+    .topnav a:hover{
+        background-color: orange;
+        color: red;
+    }
+    .topnav a:active{
+        background-color: red;
+        color: red;
+    }
+</style>
+</head>
+<body>
+    <div class="topnav">
+         <a class="active" href="#home">home</a> 
+        <a href="#home">No home</a> 
+        <a href="#home">yes No home</a> 
+          <a href="#home">ofcourse  No home</a> 
+    </div>
+    <section>
+        <img class="myslides" src="e:\For Kids\Awais\Vocabulary\download.jpg" style="height: 500px;">
+        <img class="myslides" src="" style="height: 500px;">    
+    </section>
+    <script>
+        var myIndex = 0
+        carousel();
+        function carousel(){
+            var i;
+            var x = document.getElementsByClassName("myslides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if(myIndex > x.length) {myIndex = 1}
+            x[myIndex-1].style.display="block"
+            setTimeout(carousel,3000);
+        }
+    </script>
+</body>
+</html>
